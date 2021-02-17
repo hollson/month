@@ -15,13 +15,15 @@ package main
 
 import (
     "fmt"
-    "testing"
     "time"
+
     "github.com/hollson/month"
 )
 
 func main() {
     Instance()
+    Methods()
+    Ranges()
 }
 
 // 创建Month实例
@@ -59,9 +61,11 @@ func Methods() {
 }
 
 // 集合遍历
-func Ranges(t *testing.T) {
+func Ranges() {
     month.Range(month.Month(202002), month.Month(202103), func(m month.Month) {
         fmt.Printf("%d - %d\n", m.Year(), m.Month())
     })
     fmt.Println(month.Span(month.Month(202002), month.Month(202103)))
 }
+
+```
