@@ -50,7 +50,6 @@ func TestRange(t *testing.T) {
 
 func TestReg(t *testing.T) {
     text := "Abc a7c MFC 8ca. 你好！ Golang/"
-    // 查找 Abc 或 a7c，替换为 Abccc a7ccc
     reg := regexp.MustCompile(`(Ab|a7)c`)
     fmt.Printf("%q\n", reg.ReplaceAllString(text, `${1}ccc`))
 
